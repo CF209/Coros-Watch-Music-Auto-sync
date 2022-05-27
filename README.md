@@ -16,3 +16,5 @@ Add the following line to the file replacing "PATH" with your path. This runs th
 Save the file with CTRL+O and CTRL+X
 
 The script should now automatically run every minute. If the watch is not plugged in, the target directory doesn't exist and the script will exit. If the watch is plugged in, it scans the source directory for any mp3 files that don't exist on the watch and copies them over. It then scans the watch for any files that aren't in the source directory and deletes them.
+
+Next I'd like to creat some auto-download scripts to automatically download music and podcasts for me to listen to. That way all I'll have to do is plug in my watch

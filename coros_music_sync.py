@@ -43,13 +43,15 @@ opt = podcast.getpodcast.options(
 )
 
 # Use SpotDL to download music from a spotify playlist
-print("\nDownloading Music...\n")
-for playlist in spotify_playlists:
-    os.system(f"/usr/local/bin/spotdl --output {source_path}/Spotify {playlist}")
+if len(spotify_playlists) > 0:
+    print("\nDownloading Music...\n")
+    for playlist in spotify_playlists:
+        os.system(f"/usr/local/bin/spotdl --output {source_path}/Spotify {playlist}")
 
 # Download podcasts
-print("\nDownloading Podcasts...\n")
-podcast.getpodcast.getpodcast(podcasts, opt)
+if len(podcasts) > 0:
+    print("\nDownloading Podcasts...\n")
+    podcast.getpodcast.getpodcast(podcasts, opt)
 
 # Sync Directories
 print("\nSyncing directories...\n")
